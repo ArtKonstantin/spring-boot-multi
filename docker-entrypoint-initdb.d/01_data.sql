@@ -1,0 +1,1 @@
+INSERT INTO records(counter) VALUES (0);
