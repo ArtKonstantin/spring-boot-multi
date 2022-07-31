@@ -15,11 +15,13 @@ public class DemoManager {
     public void incrementCounter() {
         // TODO:
         // UPDATE records SET counter = counter + 1;
-    }
+        jdbcTemplate.update(
+                "UPDATE records SET counter = counter + 1");    }
 
     public long getCounter() {
         // TODO:
         // SELECT counter FROM records WHERE id = 1;
-        return 0;
+        return jdbcTemplate.queryForObject(
+                "SELECT counter FROM records WHERE id = 1;", Long.class);
     }
 }

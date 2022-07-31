@@ -12,7 +12,7 @@ public class DemoClient {
         for (int i = 0; i < 10; i++) {
             threads.add(new Thread(() -> {
                 final RestTemplate restTemplate = new RestTemplate();
-                for (int j = 0; j < 100_000; j++) {
+                for (int j = 0; j < 100; j++) {
                     restTemplate.postForObject(
                             "http://localhost:8080/api/counter",
                             null,
